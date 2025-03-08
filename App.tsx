@@ -4,27 +4,20 @@ import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <StatusBar style="light" backgroundColor='black'/>
       <MapView
           style={styles.map}
           provider={PROVIDER_GOOGLE}
           initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
+            latitude: 25.879504,
+            longitude: -97.504578,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           }}
         >
-          <Marker
-            coordinate={{
-              latitude: 37.78825,
-              longitude: -122.4324,
-            }}
-            title="My Location"
-            description="This is a marker in San Francisco"
-          />
         </MapView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -32,11 +25,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   map:{
-    width: '100%',
-    height: '100%',
+    flex: 1,
   }
 });
