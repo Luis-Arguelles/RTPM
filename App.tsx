@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
       <MapView
           style={styles.map}
           provider={PROVIDER_GOOGLE}
